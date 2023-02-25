@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//        Данные для форматирования вводить через запятую без пробелов!
+        var sample = String(prompt("Enter sample, ex: Today is %1 %2.%3.%4"));
+        var line = String(prompt("Enter your line, ex: Monday,26.12.2022"));
+        var values = line.split(`,`);
+        function get_formatted(sample, values){
+            values.forEach((item, index) => sample = sample.replace('%' + (index + 1), item));
+            return sample;
+        }
+        alert(get_formatted(sample, values));
+    </script>
+</body>
+</html>

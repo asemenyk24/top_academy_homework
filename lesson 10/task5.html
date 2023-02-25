@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var your_line = prompt("Pls enter line to cut:");
+        var line_length = prompt("Enter max length by number:")
+        function cut_line(your_line, line_length){
+            if (your_line.length > line_length){
+                your_line = your_line.slice(0, line_length) + '...';
+            }
+            return your_line;
+        }
+        alert(cut_line(your_line, line_length));
+    </script>
+</body>
+</html>

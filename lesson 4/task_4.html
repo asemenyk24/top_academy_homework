@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+        html{
+            width: 1000px;
+        }
+        body{
+            width: 100%;
+            font-family: Verdana, sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            color: white;
+            background-color: #4b4b81;
+            margin: 25px;
+            padding: 0 30px 0 30px;
+        }
+        .sec_menu{
+            width: 100%;
+            height: 100px;
+        }
+        menu li{list-style: none}
+        .vert_menu_1{
+            display: block;
+            float:left;
+            width: 30%;
+            height: 100px;
+            margin-left: 30px;
+        }
+        .vert_menu_1 li:hover{
+            text-decoration: underline;
+        }
+        .vert_menu_2{
+            display: block;
+            float:left;
+            width: 30%;
+            height: 100px;
+        }
+        .vert_menu_2 li:hover{
+            text-decoration: underline;
+        }
+        .social_media{
+            float: right;
+            width: 30%;
+            padding-top: 25px;
+            margin-right: 25px;
+        }
+        .img_fb{
+            background-image: url(images/fb_gray.png);
+            background-size: cover;
+            margin: 0 10px 0 10px;
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+        }
+        .img_shit{
+            background-image: url(images/insta_gray.png);
+            background-size: cover;
+            margin: 0 10px 0 10px;
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+        }
+        .img_tube{
+            background-image: url(images/youtube_gray.png);
+            background-size: cover;
+            margin: 0 10px 0 10px;
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+        }
+        .img_fb:hover{
+            background-image: url(images/fb.png);
+        }
+        .img_shit:hover{
+            background-image: url(images/insta.png);
+        }
+        .img_tube:hover{
+            background-image: url(images/youtube.png)
+        }
+        footer {
+            width: 100%;
+            margin: 20px auto 0 auto;
+            text-align: center;
+            padding: 20px 0 0 0;
+            border-top: 1px solid white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+   <section class="sec_menu">
+        <menu class="vert_menu_1">
+               <li>Home</li>
+               <li>About</li>
+               <li>Gallery</li>
+               <li>News</li>
+        </menu>
+        <menu class="vert_menu_2">
+               <li>Blog</li>
+               <li>FAQ</li>
+               <li>Contacts</li>
+               <li>Privacy &amp; cookies</li>
+        </menu>
+       <div class="social_media">
+           <div class="img_fb"></div>
+           <div class="img_shit"></div>
+           <div class="img_tube"></div>
+       </div>
+   </section>
+    <footer>
+        Copyright &#9990; Company 2018-2019
+    </footer>
+</body>
+</html>

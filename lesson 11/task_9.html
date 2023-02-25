@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var your_line = String(prompt("Enter your line: "));
+        var devider = prompt("Enter symbol for devider: ");
+        function format_line(your_line, devider){
+            var result = [];
+            let container = new String;
+            for(let i=0; i<=your_line.length; i++){
+                if (i<(your_line.length) && your_line[i] != devider){
+                    container += your_line[i];
+                }
+                else if(i<(your_line.length) && your_line[i] == devider){
+                    result.push(container);
+                    container = '';
+                }
+                else if(i==(your_line.length)){
+                    result.push(container);
+                }
+            }
+            
+            return result;
+        }
+        alert(format_line(your_line, devider));
+    </script>
+</body>
+</html>

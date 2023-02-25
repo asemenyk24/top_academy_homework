@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [];
+        for (var i = 0; i <= 100; i++){
+            arr.push(i);
+        }
+        while(true){
+            let guess = prompt(`Is this number more or less, then ${arr[Math.floor(arr.length/2)]} or bingo!?`);
+            if(guess == 'bingo'){
+                alert(`Hidden number is ${arr[Math.floor(arr.length/2)]}!`);
+                break;
+            }
+            else if(guess == 'less'){
+                arr = arr.slice(0, Math.floor(arr.length/2));
+            }
+            else if(guess == 'more'){
+                arr = arr.slice(Math.floor(arr.length/2+1));
+            }
+        }
+    </script>
+</body>
+</html>

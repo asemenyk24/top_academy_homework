@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//        Функция запрашивает ввод строк неограниченное количество раз
+//        и присоединяет к главной строке.
+        var line = new String;
+        function lines(line){
+            var result = []; 
+            while(true){
+                line = prompt("Enter your line: ");
+                result.push(line);
+                if(!confirm("Wanna add more lines?")) break;
+            }
+            return result.join(``);
+        }
+        alert(lines(line));
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Verdana, sans-serif;
+            font-size: 24px;
+            font-weight: 300;
+            background-color: azure;
+        }
+        .tooltip{
+            position: fixed;
+            z-index: 10;
+            padding: 10px 20px;
+            text-align: center;
+            color: white;
+            background-color: mediumpurple;
+            box-shadow: 3px 3px 3px darkgrey;
+        }
+        .tooltip2{
+            position: fixed;
+            z-index: 10;
+            padding: 10px 20px;
+            text-align: center;
+            color: white;
+            background-color: mediumpurple;
+            box-shadow: 3px 3px 3px darkgrey;
+        }
+        .tooltip2::before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            background-color: mediumpurple;
+            position: absolute;
+            transform: rotate(45deg);
+            left: 70px;
+            top: -6px;
+            z-index: 10;
+        }
+        button{
+            width: 200px;
+            height: 50px;
+            font-size: 24px;
+        }
+        .container{
+            width: 500px;
+            height: 50px;
+        }
+        .butt2{
+            position: relative;
+            top: 60px;
+            left: 20px;
+        }
+        .tooltip::before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            background-color: mediumpurple;
+            position: absolute;
+            transform: rotate(45deg);
+            left: 70px;
+            top: 38px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button data-tooltip="Tool tip 1">Button 1</button>
+        <button class="butt2" data-tooltip="Tool tip 2">Button 2</button>
+    </div>
+    <script>
+        let tooltipShit;
+        document.onmouseover = function(event){
+            let target = event.target;
+            
+//            Проверка наличия подсказки
+            let tooltipHTML = target.dataset.tooltip;
+            if(!tooltipHTML) return;
+            
+//            Создание блока с подсказкой
+            tooltipShit = document.createElement('div');
+            tooltipShit.className = 'tooltip';
+            tooltipShit.innerHTML = tooltipHTML;
+            document.body.append(tooltipShit);
+            
+//            Позиционируем сверху от кнопки
+            let coords = target.getBoundingClientRect();
+            let left = coords.left + (target.offsetWidth - tooltipShit.offsetWidth) / 2;
+            
+//            Не даем вылезать за левый край
+            if (left < 0) left = 0;
+            let top = coords.top - tooltipShit.offsetHeight - 10;
+            
+//            Если нет места сверху, кидать вниз
+            if (top < 0){
+                top = coords.top + target.offsetHeight + 10;
+                tooltipShit.className = 'tooltip2';
+            }
+            tooltipShit.style.left = left + 'px';
+            tooltipShit.style.top = top + 'px';
+        }
+        document.onmouseout = function(event){
+            if (tooltipShit){
+                tooltipShit.remove();
+                tooltipShit = null;
+            }
+        }
+    </script>
+</body>
+</html>

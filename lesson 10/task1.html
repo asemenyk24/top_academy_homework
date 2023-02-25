@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const line_one = prompt("Enter line one:");
+        const line_two = prompt("Enter line two:");
+        function compare_lines(line_one, line_two){
+            if(line_one.length > line_two.length){
+                return 1;
+            }
+            else if(line_one.length < line_two.length){
+                return -1;
+            }
+            else{
+                return 0;
+            }
+        }
+        var shit = compare_lines(line_one, line_two);
+        alert(shit);
+    </script>
+</body>
+</html>

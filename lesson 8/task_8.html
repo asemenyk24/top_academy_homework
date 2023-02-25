@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let current_money = prompt("How much money do you have?");
+        let choclate_price = prompt("How much chocolate costs?");
+        let bought_amount = Math.floor(current_money / choclate_price);
+        let change = (current_money - (bought_amount * choclate_price));
+        alert("You can buy " + bought_amount + " and you'll have " + change + " money left!");
+    </script>
+</body>
+</html>

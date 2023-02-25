@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var min_range = +prompt("Enter min number: ");
+        var max_range = +prompt("Enter max number: ");
+        function check_if_perfect(min_range, max_range){
+            var result = [];
+            for (let i=min_range; i<=max_range; i++){
+                let deviders_summ = 0;
+                for (let j=1; j<=i/2; j++){
+                    if (i%j===0){
+                        deviders_summ += j;
+                    }
+                }
+                if (deviders_summ===i){
+                    result.push(i);
+                }
+            }
+            return result;
+        }
+        alert("This nymbers are perfect " + check_if_perfect(min_range, max_range) + "!!!");
+    </script>
+</body>
+</html>

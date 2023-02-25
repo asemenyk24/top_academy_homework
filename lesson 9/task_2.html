@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function nod(m, n){
+            if (n!==0){
+                const d = m%n;
+                return nod(n, d);
+            }
+            else{
+                return m;
+            }
+        }
+        var m = prompt("Enter first number:");
+        var n = prompt("Enter second number:");
+        let result = nod(m,n);
+        alert(result);
+    </script>
+</body>
+</html>

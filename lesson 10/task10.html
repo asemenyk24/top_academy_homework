@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var your_line = prompt("Enter your line:");
+        var symbol = prompt('Enter symbol to search:');
+        function find_index(your_line, symbol){
+            your_line = your_line.split("");
+            var indices = [];
+            var indx = your_line.indexOf(symbol);
+            while(indx!=-1){
+                indices.push(indx);
+                indx = your_line.indexOf(symbol, indx+1);
+            }
+            if(indices.length==0){
+                return "No match found!";
+            }
+            else{
+                var symbol_reps = "Symbol repeats " + indices.length + " times and it's indexes ";
+                return [symbol_reps, indices]
+            }
+        }
+        result = find_index(your_line, symbol);
+        alert(result);
+    </script>
+</body>
+</html>

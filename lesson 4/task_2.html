@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vertical menu</title>
+    <style>
+        html{
+            min-width: 700px;
+            max-width: 1000px;
+        }
+        body{
+            font-family: Verdana, sans-serif;
+            font-weight: 100;
+            background-color: #e9def4;
+            width: 100%;
+            border: 1px solid grey;
+        }
+        ul{
+            list-style: none;
+        }
+        .nav_main{
+            position: relative;
+            background: darkgrey;
+            width: 300px;
+            height: 100px;
+            margin: 0 0 0 20px;
+        }
+        .nav_icon{
+            position: relative;
+            width: 80px;
+            height: 80px;
+            float: left;
+            top: 10px;
+        }
+        .nav_title{
+            display: block;
+            position: relative;
+            text-align: left;
+            height: 70px;
+            width: 100%;
+            text-decoration: none;
+            color: white;
+            top: 40px;
+            left: 20px;
+            font-size: 16px;
+        }
+        .nav_main:hover {
+            background: #656262;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <div class="nav_main">
+                    <div><img src="images/edit.png" alt="edit" class="nav_icon"></div>
+                    <a href="#" class="nav_title">EDIT</a>    
+                </div>
+            <li>
+                <div class="nav_main">
+                    <div><img src="images/favorites.png" alt="edit" class="nav_icon"></div>
+                    <a href="#" class="nav_title">FAVOURITES</a>    
+                </div>
+            </li>
+            <li>
+                <div class="nav_main">
+                    <div><img src="images/history.png" alt="edit" class="nav_icon"></div>
+                    <a href="#" class="nav_title">HISTORY</a>    
+                </div>
+            <li>
+                <div class="nav_main">
+                    <div><img src="images/security.png" alt="edit" class="nav_icon"></div>
+                    <a href="#" class="nav_title">SECURITY</a>    
+                </div>
+            <li>
+                <div class="nav_main">
+                    <div><img src="images/settings.png" alt="edit" class="nav_icon"></div>
+                    <a href="#" class="nav_title">SETTINGS</a>    
+                </div>
+           </ul>
+    </nav>
+</body>
+</html>

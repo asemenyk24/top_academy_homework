@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function compare_dates(h1,m1,s1,h2,m2,s2){
+            let first_date = h1 * 3600 + m1 * 60 + s1;
+            let second_date = h2 * 3600 + m2 * 60 + s2;
+            if (first_date > second_date){
+                var result = first_date - second_date;
+            }
+            else if (first_date < second_date){
+                var result = second_date - first_date;
+            }
+            let h = Math.floor(result / 3600);
+            let m = Math.floor((result - h * 3600) / 60);
+            let s = result - (h * 3600 + m * 60);
+            return `${h}:${m}:${s}`;
+        }
+        alert(compare_dates(20,20,30,30,19,15) + " hh:mm:ss");
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var your_line = prompt("Enter your line:");
+        function calc_average(your_line){
+            your_line = your_line.split(` `);
+            let sum_count = 0;
+            for(var i=0; i<your_line.length; i++){
+                sum_count += your_line[i].length;
+            }
+            var average = sum_count/your_line.length;
+//            "Если нужно целое значение, то пишем Math.floor()"
+            return average;
+        }
+        alert(calc_average(your_line));
+    </script>
+</body>
+</html>

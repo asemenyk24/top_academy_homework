@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = String(prompt("Enter your line:"));
+        function stats_line(str){
+            var sumNumber = 0;
+            var sumLetter = 0;
+            var sumOther = 0;
+            for(let i=0; i<str.length; i++){
+                if (str[i].match(/[A-ZА-ЯЁ]/gi)){
+                    sumLetter += 1;
+                }
+                else if (str[i].match(/\d/g)){
+                    sumNumber += 1;
+                }
+                else{
+                    sumOther += 1;
+                }
+            }
+            return [sumLetter, sumNumber, sumOther];
+        }
+        result = stats_line(str);
+        alert("Your line contains: letters, numbers, other symbols: " + result + "!")
+    </script>
+</body>
+</html>

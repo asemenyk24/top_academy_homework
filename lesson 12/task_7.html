@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function display_date(hh, mm, ss){
+            if (hh != undefined && mm != undefined && ss != undefined){
+                return `${hh}:${mm}:${ss}`;
+            }
+            else if (hh != undefined && mm != undefined && ss == undefined){
+                return `${hh}:${mm}:00`;
+            }
+            else if (hh != undefined && mm == undefined && ss == undefined){
+                return `${hh}:00:00`;
+            }
+            else if (hh != undefined && mm == undefined && ss !=undefined){
+                return `${hh}:00:${ss}`;
+            }
+            else{
+                return "Try other arguments";
+            }
+        }
+        alert(display_date(20,undefined,20));
+        alert(display_date(20,20,20));
+        alert(display_date(20,20));
+        alert(display_date(20));
+    </script>
+</body>
+</html>

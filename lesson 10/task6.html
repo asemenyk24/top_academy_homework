@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var maybe_palindrome = prompt("Enter your word:");
+        function check_palindrome(maybe_palindrome){
+            var reversed_word = "";
+            for(var i=maybe_palindrome.length - 1; i>=0; i--){
+                reversed_word += maybe_palindrome[i];
+            }
+            if(reversed_word === maybe_palindrome){
+                return "Yes, this word is palindrome!";
+            }
+            else{
+                return "Nope.";
+            }
+        }
+        alert(check_palindrome(maybe_palindrome));
+    </script>
+</body>
+</html>

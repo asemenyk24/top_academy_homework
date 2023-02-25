@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var text_style = String(prompt("Enter style in 'style-property':"));
+        function toCamelcase(text_style){
+            text_style = text_style.split('-');
+            var result = [];
+            for (var i=0; i<text_style.length; i++){
+                if (i==0){
+                    result.push(text_style[0]);
+                }
+                else if (i>0){
+                    result.push(text_style[i][0].toUpperCase());
+                    result.push(text_style[i].slice(1));
+                }
+            }
+            return result.join('');
+        }
+        alert(toCamelcase(text_style));
+    </script>
+</body>
+</html>

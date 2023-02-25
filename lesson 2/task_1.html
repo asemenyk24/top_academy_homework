@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html{
+            width: 850px;
+        }
+        body{
+            font-family:sans-serif;
+            font-weight: 300;
+            max-width: 100%;
+            background-color: #e5ddf5;
+            font-size: 14px;
+            border-style: solid;
+            border-color: darkgrey;
+            padding: 10px;
+        }
+        .container{
+            background: #ffa3b3;
+            font-family: cursive;
+            font-size: 18px;
+            font-weight: 100;
+            display:flex;
+            justify-content: center;
+            left:43%;
+            right:43%;
+            position: relative;
+            width: 14%;
+        }
+        #c1{
+            left:40%;
+            right:40%;
+            width:20%;
+        }
+        #c2{
+            left:34%;
+            right:34%;
+            width:32%;
+        }
+        h1{
+            text-align: center;
+            font-size: 20px;
+            margin-top: 0;
+        }
+        h2{
+            font-size:16px;
+        }
+        .variable{
+            font-style: italic;
+            font-weight: 600;
+            color:#cc0f0f;
+        }
+        .sign{
+            font-family:cursive;
+            font-style: italic;
+            font-weight: 600;
+            color:#cc0f0f;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mathematical formulas</h1>
+    <h2>Linear Equations</h2>
+    <p>
+        A linear equation is any equation that can be written in the form:
+    </p>
+    <div class="container">ax + b = 0</div>
+    <p>
+        where <span class="variable">a</span> and <span class="variable">b</span> are real numbers and <span class="variable">x</span> is a variable. This form is sometimes called the standard form of a linear equation. Note that most linear equations will not start off in this form. Also, the variable may or may not be an <span class="variable">x</span> so don’t get too locked into always seeing an <span class="variable">x</span> there.
+    </p>
+    <h2>Quadratic Equation</h2>
+    <p>
+    The standard form of a quadratic equation looks like this:
+    </p>
+    <div class="container", id="c1">ax<sup>2</sup>&nbsp;+ bx + c = 0</div>
+    <p>
+    where <span class="variable">a</span>, <span class="variable">b</span>, <span class="variable">c</span> are known values and <span class="variable">x</span> is the variable or unknown (we don't know it yet). Also, <span class="variable">a</span> can't be 0.
+    </p>
+    <h2>The area of a circle (A)</h2>
+    <p>
+    <span class="sign">&pi;</span> (Pi) times the radius (<span class="variable">r</span>) squared:
+    </p>
+    <div class="container">A = &pi; &times; r<sup>2</sup></div> 
+    <p>
+    or, when you know the diameter (<span class="variable">D</span>):
+    </p>
+    <div class="container", id="c1">A = (&pi; / 4) &times; D<sup>2</sup></div> 
+    <p>
+    or, when you know the circumference (<span class="variable">C</span>):
+    </p>
+    <div class="container", id="c1">A = C<sup>2</sup>&nbsp;/ 4 &times; &pi;</div> 
+    <h2>Intersection</h2>
+   <p>
+   The intersection of two sets <span class="variable">A</span> and <span class="variable">B</span>, denoted by A &cup; B, is the set of all objects that are members of both the sets A and B. In symbols,
+   </p>
+   <div class="container", id="c2">A &cup; B = { x : x &isin; A and x &isin; B }</div>  
+   <p>
+   That is, <span class="variable">x</span> is an element of the intersection A &cup; B if and only if <span class="variable">x</span> is both an element of <span class="variable">A</span> and an element of <span class="variable">B</span>.
+   </p>
+</body>
+</html>

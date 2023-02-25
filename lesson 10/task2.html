@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let message = prompt("Enter your line:");
+        function upper_first_letter(message){
+            message = message[0].toUpperCase() + message.slice(1, message.length);
+            return message;
+        }
+        alert(upper_first_letter(message));
+    </script>
+</body>
+</html>

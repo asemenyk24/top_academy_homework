@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+        body{
+            font-family: Verdana, sans-serif;
+            font-size: 14px;
+            font-weight: 100;
+        }
+        .head_container{
+            width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .head{
+            background-color: #34568b;
+            margin: 0;
+            width: 100%;
+        }
+        .main_container{
+            padding: 20px 85px 20px 85px;
+            width: 1200px;
+            margin: 0 auto;
+            background-color: aliceblue;
+            height: 1000px;
+        }
+        nav{
+            width: 100%;
+            height: 80px;
+            padding: 30px 80px 30px 80px;
+        }
+        nav ul {
+            display: block;
+            float: right;
+            list-style-type: none;
+            margin: 0;
+        }
+        nav li {
+            display: inline-block;
+            color: white;
+        }
+        li a{
+            color: white;
+        }
+        .site_name{
+            float: left;
+            color: white;
+            font-weight: 100;
+        }
+         .top_select{
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .main_menu{
+            display: flex;
+            justify-content: space-between;
+        }
+        .main_menu input{
+            width: 150px;
+            height: 40px;
+            border: solid 1px darkgrey;
+            border-radius: 10px;
+            padding-left: 15px;
+        }
+        #f_from, #f_to{
+            background-image: url(images/location.svg);
+            background-repeat: no-repeat;
+            background-position: 110px;
+        }
+        #f_depart, #f_return{
+            background-image: url(images/calendar.svg);
+            background-repeat: no-repeat;
+            background-position: 110px;
+        }
+        .main_menu select, #search_flight{
+            width: 150px;
+            height: 40px;
+            border: solid 1px darkgrey;
+            border-radius: 10px;
+            padding-left: 15px;
+            color: grey;
+        }
+        .main_menu #search_flight{
+            background-color: #34568b;
+            color: white;
+        }
+        .left_pannel{
+            border: solid 1px darkgrey;
+            border-radius: 10px;
+            width: 30%;
+            margin-top: 30px;
+            padding: 30px 20px 30px 20px;
+            background-color: white;
+        }
+        .main_section{
+            display: flex;
+        }
+        .main_section label{
+            color: #34568b;
+            font-weight: 600;
+        }
+        .main_section h3{
+            font-weight: 600;
+            font-size: 20px;
+        }
+        #more_stops{
+            margin-bottom: 20px;
+        }
+        .price{
+            display: block;
+            margin-bottom: 20px;
+        }
+        .price p{
+            display: inline-block;
+        }
+        #min_price{
+            width: 70px;
+            height: 40px;
+            border: solid 1px darkgrey;
+            border-radius: 10px;
+            padding-left: 15px;
+        }
+        #max_price{
+            width: 100px;
+            height: 40px;
+            border: solid 1px darkgrey;
+            border-radius: 10px;
+            padding-left: 15px;
+        }
+        .right_pannel{
+            width: 70%;
+            border: solid 1px darkgrey;
+            border-radius: 10px;
+            margin-top: 30px;
+            margin-left: 30px;
+            padding: 30px 0px 30px 0px;
+            background-color: white;
+        }
+        .right_pannel h3{
+            text-align: center;
+        }
+        .destination{
+            height: 80px;
+            border-bottom: solid 1px darkgrey;
+            padding: 0 20px 0 20px;
+        }
+        .destination_tags{
+            background-color: aliceblue;
+            height: 40px;
+            padding: 10px 0px 0 0px;
+            border-bottom: solid 1px darkgrey;
+        }
+        .destination_tags ul{
+            width: 550px;
+            margin-top: 0;
+            padding-left: 0;
+            list-style: none;
+            display: inline-flex;
+            justify-content: space-between;
+        }
+        .destination_tags li{
+            display: block;
+            color: #34568b;
+            font-weight: 600;
+            width: 20%;
+            text-align: center;
+        }
+        .flight_info{
+            height: 80px;
+            padding: 0;
+            border-bottom: solid 1px darkgrey;
+        }
+        .flight_info ul{
+            margin-top: 0;
+            padding-left: 0; 
+            width: 550px;
+            list-style: none;
+            display: inline-flex;
+            justify-content: space-between;
+        }
+        .flight_info li{
+            color: black;
+            font-size: 16px;
+            font-weight: 300px;
+            display: block;
+            width: 20%;
+            text-align: center;
+        }
+        #price{
+            margin-top: 30px;
+        }
+        #under{
+            font-size: 12px;
+            color: grey;
+        }
+        .booking{
+            float: right;
+            margin: 10px 20px 0 0;
+        }
+        #book_flight{
+            margin-left: 12px;
+            color: white;
+            background-color: #34568b;
+            width: 60px;
+            height: 30px;
+            border: solid 1px darkgrey;
+            border-radius: 5px;
+        }
+        .booking a{
+            color:#34568b;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="head">
+        <div class="head_container">
+            <nav>
+                <div class="site_name">Flights - Search List</div>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li>/</li>
+                    <li><a href="">Flights Search List</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="main_container">
+        <div>
+            <form action="/">
+                <div>
+                    <p class="top_select"><input type="radio" id="one_way" name="tripType">One Way</p>
+                    <p class="top_select"><input type="radio" id="round_trip" name="tripType">Round Trip</p>
+                </div>
+                <div class="main_menu">
+                    <input type="text" id="f_from" placeholder="From">
+                    <input type="text" id="f_to" placeholder="To">
+                    <input type="text" id="f_depart" placeholder="Depart Date">
+                    <input type="text" id="f_return" placeholder="Return Date">
+                    <select  id="select_class" name="selectClass" required="required">
+                        <option value="1">Economy Class</option>
+                        <option value="2">Business Class</option>
+                    </select>
+                    <input type="submit" id="search_flight" value="Search">
+                </div>
+            </form>
+        </div>
+        <div class="main_section">
+            <div class="left_pannel">
+                <h3>Filter</h3>
+                <form action="/">
+                    <label for="stops_no">No. of Stops</label>
+                    <p><input type="checkbox" id="non_stop" name="nonStop">Non Stop</p>
+                    <p><input type="checkbox" id="one_stop" name="oneStop">1 Stop</p>
+                    <p><input type="checkbox" id="more_stops" name="moreStops">2+ Stops</p>
+                    <label for="price_minmax">Price</label>
+                    <div class="price">
+                        <p><input type="text" id="min_price" placeholder="0"> $ -</p>
+                        <p><input type="text" id="max_price" placeholder="1000"> $</p>
+                    </div>
+                    <label for="airlines_c">Airlines</label>
+                    <p><input type="checkbox" id="asiana" name="aSiana">Asiana Airlines</p>
+                    <p><input type="checkbox" id="american" name="aMerican">American Airlines</p>
+                    <p><input type="checkbox" id="canada" name="cAnada">Air Canada</p>
+                    <p><input type="checkbox" id="india" name="iNdia">Air India</p>
+                    <p><input type="checkbox" id="jet" name="jEt">Jet Airways</p>
+                    <p><input type="checkbox" id="spice" name="salt">Spicejet</p>
+                    <p><input type="checkbox" id="indigo" name="iNdigo">IndiGo</p>
+                    <p><input type="checkbox" id="multiple" name="mUltiple">Multiple Airlines</p>
+                </form>
+            </div>
+            <div class="right_pannel">
+                <div class="destination">
+                    <h3>Dehli to Sydney</h3>
+                </div>
+                <div class="destination_tags">
+                    <ul>
+                        <li>Airlines</li>
+                        <li>Departure</li>
+                        <li>Duration</li>
+                        <li>Arrival</li>
+                        <li>Price</li>
+                    </ul>
+                </div>
+                <div class="flight_info">
+                    <ul>
+                        <li><p>IndiGo</p><p id="under">6E-2489</p></li>
+                        <li><p>23:30</p><p id="under">Dehli</p></li>
+                        <li><p>18h 55m</p><p id="under">Non Stop</p></li>
+                        <li><p>18:15</p><p id="under">Sydney</p></li>
+                        <li><p id="price">980$</p></li>
+                    </ul>
+                    <div class="booking">
+                        <input type="submit" id="book_flight" value="Book">
+                        <p id="under"><a href="">Flight deatails</a></p>
+                    </div>
+                </div>
+                <div class="flight_info">
+                    <ul>
+                        <li><p>IndiGo</p><p id="under">6E-2489</p></li>
+                        <li><p>23:30</p><p id="under">Dehli</p></li>
+                        <li><p>18h 55m</p><p id="under">Non Stop</p></li>
+                        <li><p>18:15</p><p id="under">Sydney</p></li>
+                        <li><p id="price">980$</p></li>
+                    </ul>
+                    <div class="booking">
+                        <input type="submit" id="book_flight" value="Book">
+                        <p id="under"><a href="">Flight deatails</a></p>
+                    </div>
+                </div>
+                <div class="flight_info">
+                    <ul>
+                        <li><p>IndiGo</p><p id="under">6E-2489</p></li>
+                        <li><p>23:30</p><p id="under">Dehli</p></li>
+                        <li><p>18h 55m</p><p id="under">Non Stop</p></li>
+                        <li><p>18:15</p><p id="under">Sydney</p></li>
+                        <li><p id="price">980$</p></li>
+                    </ul>
+                    <div class="booking">
+                        <input type="submit" id="book_flight" value="Book">
+                        <p id="under"><a href="">Flight deatails</a></p>
+                    </div>
+                </div>
+                <div class="flight_info">
+                    <ul>
+                        <li><p>IndiGo</p><p id="under">6E-2489</p></li>
+                        <li><p>23:30</p><p id="under">Dehli</p></li>
+                        <li><p>18h 55m</p><p id="under">Non Stop</p></li>
+                        <li><p>18:15</p><p id="under">Sydney</p></li>
+                        <li><p id="price">980$</p></li>
+                    </ul>
+                    <div class="booking">
+                        <input type="submit" id="book_flight" value="Book">
+                        <p id="under"><a href="">Flight deatails</a></p>
+                    </div>
+                </div>
+                <div class="flight_info">
+                    <ul>
+                        <li><p>IndiGo</p><p id="under">6E-2489</p></li>
+                        <li><p>23:30</p><p id="under">Dehli</p></li>
+                        <li><p>18h 55m</p><p id="under">Non Stop</p></li>
+                        <li><p>18:15</p><p id="under">Sydney</p></li>
+                        <li><p id="price">980$</p></li>
+                    </ul>
+                    <div class="booking">
+                        <input type="submit" id="book_flight" value="Book">
+                        <p id="under"><a href="">Flight deatails</a></p>
+                    </div>
+                </div>
+                <div class="flight_info">
+                    <ul>
+                        <li><p>IndiGo</p><p id="under">6E-2489</p></li>
+                        <li><p>23:30</p><p id="under">Dehli</p></li>
+                        <li><p>18h 55m</p><p id="under">Non Stop</p></li>
+                        <li><p>18:15</p><p id="under">Sydney</p></li>
+                        <li><p id="price">980$</p></li>
+                    </ul>
+                    <div class="booking">
+                        <input type="submit" id="book_flight" value="Book">
+                        <p id="under"><a href="">Flight deatails</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

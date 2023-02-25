@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #dJgay{
+            background-color: greenyellow;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+        #field{
+            margin: 300px auto;
+            width: 839px;
+            height: 560px;
+            border: 1px solid red;
+            background-image: url(four_horseman.jpg);
+            position: relative;
+            overflow: hidden;
+            cursor: crosshair;
+        }
+        #ball{
+            position: absolute;
+            left: 0;
+            right: 0;
+            border-radius: 80px;
+            width: 160px;
+            height: 160px;
+            transition: all 1.5s;
+        }
+    </style>
+</head>
+<body id="dJgay">
+    <div id="field">
+        <img src="billy.jpg" id="ball">
+    </div>
+    <script>
+        field.onclick = function(event){
+//            Привязка к окну браузера
+            let fieldCoords = this.getBoundingClientRect();
+            let ballCoords = {
+                top: event.clientY - fieldCoords.top - field.clientTop - ball.clientHeight / 2,
+                left: event.clientX - fieldCoords.left - field.clientLeft - ball.clientWidth / 2
+            };
+//            Верхняя граница
+            if (ballCoords.top < 0){
+                ballCoords.top = 0;
+            }
+//            Левая граница
+            if (ballCoords.left < 0){
+                ballCoords.left = 0;
+            }
+//            Правая граница
+            if (ballCoords.left + ball.clientWidth > field.clientWidth){
+                ballCoords.left = field.clientWidth - ball.clientWidth;
+            }
+//            Нижняя граница
+            if (ballCoords.top + ball.clientHeight > field.clientHeight){
+                ballCoords.top = field.clientHeight - ball.clientHeight;
+            }
+            ball.style.left = ballCoords.left + 'px';
+            ball.style.top = ballCoords.top + 'px';
+            let gayShit = Math.round(Math.random()*1337)+"deg";
+            ball.style.transform = "rotate("+gayShit+")";
+        }
+        field.onmousemove = function(event){    
+            dJgay.style.backgroundColor = "rgb("+Math.round(255*Math.random())+","+Math.round(255*Math.random())+","+Math.round(255*Math.random())+")";
+        }
+    </script>
+</body>
+</html>

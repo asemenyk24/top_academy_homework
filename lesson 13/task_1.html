@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            font-style: Verdana, sans-serif;
+            font-weight: 100;
+            font-size: 20px;
+        }
+        body{
+            background-color: azure;
+        }
+        .form{
+            width: 400px;
+            height: 150px;
+            background-color: beige;
+            padding: 25px;
+            margin: 250px auto;
+            border: solid 1px red;
+            border-radius: 20px;
+        }
+        #username{
+            width: 100%;
+            border-radius: 8px;
+            height: 35px;
+        }
+        label{
+            display: block;
+            position: relative;
+            margin-top: 30px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <label for="username">Enter your name (mame can't contain digits)</label>
+        <input type="text" id="username" placeholder="Letters only">
+        <script>
+            var name = document.querySelector('#username');
+            var regex = /[0-9]/g;
+            username.oninput = function(){
+                if (this.value.match(regex)){
+                    this.value = this.value.replace(regex, '');
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

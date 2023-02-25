@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Verdana, sans-serif;
+            font-weight: 500;
+        }
+        .modal{
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            min-width: 1000px;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.33);
+        }
+        .modal_content{
+            background-color: aquamarine;
+            margin: 400px auto;
+            padding: 25px;
+            width: 50%;
+            min-width: 500px;
+            height: 400px;
+            font-size: 18px;
+            display: block;
+            border-radius: 50px;
+            border: solid 3px red;
+        }
+        button{
+            cursor: crosshair;
+        }
+        .open{
+            margin: 100px 0 0 200px;
+            width: 400px;
+            height: 250px;
+            font-size: 60px;
+            border-radius: 100px;
+            border: solid 1px darkgrey;
+        }
+        .hello{
+            font-size: 80px;
+            text-align: center;
+        }
+        .close{
+            width: 50%;
+            margin: 60px auto;
+            display: block;
+            height: 120px;
+            border-radius: 50px;
+            border: solid 1px darkgrey;
+            font-size: 60px;
+        }
+    </style>
+    
+</head>
+<body>
+    <button onclick="openModal();" class="open">Open modal</button>
+    <div class="modal">
+        <div class="modal_content">
+            <p class="hello">Hello from modal window!</p>
+            <button onclick="closeModal();" class="close">Close</button>
+        </div>
+    </div>
+    <script>
+        var modal = document.getElementsByClassName("modal")[0];
+        function openModal(){
+            modal.style.display = "block";
+        }
+        function closeModal(){
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>

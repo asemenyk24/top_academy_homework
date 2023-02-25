@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var your_number = +prompt("Enter 2-digit number: ");
+        function number_to_text(your_number){
+            const numbers = [
+                ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 
+                 'ten', 'eleven', 'twelve', 'thir', '', 'fif', '', '', 'eigh', ''],
+                ['', '', 'twen', 'thir', 'for', 'fif', 'six', 'seven', 'eigh', 'nine']
+            ];
+            
+            if(your_number >= 0 && your_number <= 12){
+                return numbers[0][your_number];
+            }
+            if(your_number > 12 && your_number <= 19){
+                return (numbers[0][your_number] || numbers[0][your_number - 10])+ 'teen';
+            }
+            if(your_number > 19 && your_number <= 99){
+                return (numbers[1][your_number.toString()[0]] + 'ty' + numbers[0][your_number.toString()[1]]);
+            }
+        }
+        alert(number_to_text(your_number));
+    </script>
+</body>
+</html>

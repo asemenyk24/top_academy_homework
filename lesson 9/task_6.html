@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        while(true){
+            var a = Number(prompt("Enter 1st number:"));
+            var b = Number(prompt("Enter 2nd numbers:"));
+            var i = prompt("Chhose mathematical sign + - / *");
+            switch (i){
+                case '+':
+                    alert(a+b);
+                    break;
+                case '-':
+                    alert(a-b);
+                    break;
+                case '/':
+                    alert(a/b);
+                    break;
+                case '*':
+                    alert(a*b);
+                    break;
+            }
+            if(!confirm("Wanna calc more?")) break;
+        }
+    </script>
+</body>
+</html>

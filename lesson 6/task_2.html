@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+        html{
+            width: 1500px;
+            height: 1000px;
+            background-color: azure;
+        }
+        body{
+            display: flex;
+            background: url(images/background_patrick.jpg) no-repeat center;
+            width: 1200px;
+            height: 1000px;
+            color: white;
+            font-family: Verdana, sans-serif;
+            margin: 0;
+            font-size: 14px;
+            font-weight: 100;
+        }
+        .contact_form{
+            display: block;
+            width: 800px;
+            height: 550px;
+            border: solid 1px white;
+            box-shadow: 0 0 20px 10px white;
+            background: none;
+            margin: 200px;
+            padding: 30px 30px 30px 30px;
+        }
+        h2{
+            font-size: 24px;
+            font-weight: 600;
+        }
+        label{
+            display: block;
+            width: 150px;
+            font-size: 14px;
+        }
+        input{
+            display: block;
+            height: 30px;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-style: none;
+            padding-left: 20px;
+            background-color: #efefef;
+        }
+        input:focus{
+            background-color: snow;
+        }
+        select{
+            height: 30px;
+            margin-left: 10px;
+            border-style: none;
+            padding-left: 20px;
+            width: 77%;
+            background-color: #efefef;
+            color: grey;
+        }
+        select:focus{
+            background-color: snow;
+        }
+        .line1, .line2, .line3, .line4, .line5{
+            display: inline-flex;
+            width: 100%;
+            margin: 10px 0 10px 0;
+        }
+        #first_name, #last_name{
+            width: 275px;
+        }
+        #email{
+            width: 570px;
+        }
+        #second_3_numbers, #last_numbers{
+            width: 27.5%;
+        }
+        #first_3_numbers{
+            width: 16.5%;
+        }
+        textarea{
+            background-color: #efefef;
+            margin-left: 10px;
+            width: 77%;
+            height: 90px;
+            padding-left: 20px;
+        }
+        textarea:focus{
+            background-color: snow;
+        }
+        #submit_form{
+            float: right;
+            width: 77%;
+            border: solid 2px white;
+            height: 35px;
+            background: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact_form">
+        <h2>Contact form</h2>
+        <p>Plase fill in your information and we'll be sending your order.</p>
+        <form action="/">
+            <div class="line1">
+               <label for="your_name">Your name</label>
+                <input type="text" id="first_name" name="firstName" placeholder="first name">
+                <input type="text" id="last_name" name="lastName" placeholder="last name">
+            </div>
+            <div class="line2">
+                <label for="email">Your email</label>
+                <input type="email" id="email" name="yourEmail" placeholder="your_mail@mail.com">
+            </div>
+            <div class="line3">
+                <label for="your_phone">Phone<sup>*</sup></label>
+                <input type="text" maxlength="3" id="first_3_numbers" name="firstNumbers" placeholder="000" required="required">
+                <input type="text" maxlength="3" id="second_3_numbers" name="secondNumbers" placeholder="000" required="required">
+                <input type="text" maxlength="4" id="last_numbers" name="lastNumbers" placeholder="0000" required="required">
+            </div>
+            <div class="line4">
+                <label for="select_subject">Message subject<sup>*</sup></label>
+                <select  id="select_subject" name="messageSubject" required="required">
+                    <option value="">Your subject</option>
+                    <option value="1">Sigma rule</option>
+                    <option value="2">Gachi-muchi</option>
+                    <option value="3">Boss of the gym</option>
+                    <option value="4">Other</option>
+                </select>
+            </div>
+            <div  class="line5">
+                <label>Message<sup>*</sup></label>
+                <textarea name="message_text" maxlength="200" placeholder="write your message" required="required"></textarea>
+            </div>
+            <hr>
+            <input type="submit" id="submit_form" value="SUBMIT FORM">
+        </form>
+    </div>
+</body>
+</html>

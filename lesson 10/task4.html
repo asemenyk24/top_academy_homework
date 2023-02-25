@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var message = prompt("Incoming message!");
+        function spam(message){
+            var banned_messages = ["100% free", "increase your sales", "just today", "do not delete", "xxx"];
+            for (i=0; i<banned_messages.length; i++){
+                if(message.toLowerCase().includes(banned_messages[i])){
+                   return true;
+                    break;
+                }
+            }
+            return false;
+        }
+        alert(spam(message));
+    </script>
+</body>
+</html>

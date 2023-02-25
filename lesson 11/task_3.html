@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var your_line = String(prompt("Enter your line: "));
+        function transform_line(your_line){
+            const regex = /[0-9]/g;
+            var result = [];
+            for(let i=0; i<your_line.length; i++){
+                if (your_line[i].match(/[A-ZА-ЯЁ]/g)){
+                    result.push(your_line[i].toLowerCase());
+                }
+                else if (your_line[i].match(/[a-zа-яё]/g)){
+                    result.push(your_line[i].toUpperCase());
+                }
+                else if (your_line[i].match(regex)){
+                    result.push(your_line[i].replace(regex, '_'));
+                }
+                else{
+                    result.push(your_line[i]);
+                }
+            }
+            return result.join('');
+        }
+        alert(transform_line(your_line));
+    </script>
+</body>
+</html>

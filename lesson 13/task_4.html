@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: beige;
+            margin: 25px;
+        }
+        .light{
+            width: 250px;
+            height: 250px;
+            border-radius: 125px;
+            border: 1px solid black;
+            display: inline-block;
+            margin: 25px;
+            background-color: darkgray;
+        }
+        .traffic{
+            width: 920px;
+            padding: 0;
+            height: 300px;
+            border: 1px solid black;
+            border-radius: 25px;
+            display: inline-block;
+        }
+        #someshit{
+            width: 300px;
+            height: 300px;
+            border-radius: 25px;
+            border: 1px solid black;
+            display: inline-block;
+            position: fixed;
+            margin-left: 25px;
+            font-size: 40px;
+            font-family: Verdana, sans-serif;
+        }
+        .container{
+            display: inline-block;
+            width: 1500px;
+            height: 350px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="traffic">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+        <input type="button" id="someshit" value="NEXT" onclick="traffic_light()">
+    </div>
+    <script>
+        var i = -1;
+        function traffic_light(){
+            i++;
+            let arr = ['red', 'orange', 'green'],
+                light = document.querySelectorAll('.light');
+            if(light[i-1]){
+                light[i-1].style.backgroundColor = '';
+            }
+            if(i == arr.length){
+                i = 0;
+            }
+            light[i].style.backgroundColor = arr[i];
+        }
+    </script>
+</body>
+</html>

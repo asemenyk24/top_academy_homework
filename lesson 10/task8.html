@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var your_line = prompt("Enter your line:");
+        function find_longest_word(your_line){
+            your_line = your_line.split(` `);
+            var longest = your_line[0]; 
+            for (var i=0; i<your_line.length; i++){
+                if(longest.length < your_line[i].length){
+                    longest = your_line[i];
+                }
+            }
+            return longest;
+        }
+        alert(find_longest_word(your_line));
+    </script>
+</body>
+</html>

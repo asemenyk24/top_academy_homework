@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = prompt("Enter number:");
+        let move = prompt("How much to move?");
+        function shift(str, move){
+            let i = str.length > 0 ? move % str.length : 0;
+            return str.slice(i) + str.slice(0, i);
+        }
+        alert(shift(str, move));
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const week_days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+        let enter_day = Number(prompt("Enter which day is it today by NUMBER"));
+        while(confirm(`${week_days[enter_day]}. Wanna see next day?`)){
+            enter_day = (enter_day + 1) % week_days.length;
+        }
+    </script>
+</body>
+</html>

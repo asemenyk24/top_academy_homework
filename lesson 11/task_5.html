@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var your_line = String(prompt("Enter your phrase: "));
+        function to_abbr(your_line){
+            const regex = /[\s, -]/g;
+            your_line = your_line.split(regex);
+            var abbr = [];
+            for(let i=0; i<your_line.length; i++){
+                abbr.push(your_line[i][0].toUpperCase());
+            }
+            return abbr.join('');
+        }
+        alert(to_abbr(your_line));
+    </script>
+</body>
+</html>
